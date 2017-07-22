@@ -1,14 +1,16 @@
 angular.module('movieApp')
 
 .factory('movieService', function ($http) {
-  function getPopularFilm (query) {
-    var url = 'https://api.themoviedb.org/3/movie/popular?api_key=835605dce55259fcb74c6103cf021c90&language=en-US&page=1'
+  // function getPopularFilm (query) {
 
-    // console.log(url)
+  function getPopularFilm () {
+    var token = '3e8bb211bfde5d15ec1dfa259f575ce9'
+    var url = 'https://api.themoviedb.org/3/movie/popular?api_key=' + token
 
-   // return $http.get(url)
+    return $http.get(url)
   }
-  // return {
-  // 	getPopularFilm: getPopularFilm
-  // }
+
+  return {
+    getPopularFilm: getPopularFilm
+  }
 })

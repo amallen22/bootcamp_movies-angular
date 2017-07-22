@@ -1,7 +1,8 @@
 <h1>{{ section }}</h1>
-<div class="container">
-    <p>Bootes basiophitic oviductal plowable unwormy subcurate homomorphy cawquaw cerebellipetal cadge nonchurchgoer clyster massagist cimelia Olympionic straightway belemnoid highbred kamao thornen leefang conhydrine inopinately sanguinariness</p>
-    <p>
-        <a class="btn btn-primary btn-lg">Learn more</a>
-    </p>
+<div class="row" ng-controller="popularController">
+	<div class="col-md-3" ng-repeat="results in result">
+		<!-- <h2 ng-repeat="title in titles">{{title}}</h2> -->
+		<h2>{{results.title}}</h2>
+		<p>{{results.overview}}</p>
+	</div>    
 </div>

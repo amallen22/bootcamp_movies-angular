@@ -17,12 +17,12 @@
 				<a href="#!/toprated" class="navbar-link">topRated</a>
 			</nav>
 		</header>
-		<div class="container">
+		<!-- <div class="container">
 			<form ng-controller="SearchMovieController">
 				<input ng-model="movieQuery" type="text" />
 				<button ng-click="searchMovie()">Search</button>
 			</form>
-		</div>
+		</div> -->
 		<div class="container">
 			<ng-view></ng-view>
 		</div>
@@ -36,7 +36,7 @@
 <script type="text/javascript" src="js/app.js"></script>
 
 <!-- SEARCH CONTROLLER -->
-<script type="text/javascript" src="js/controller/search/searchController.js"></script>
+<!-- <script type="text/javascript" src="js/controller/search/searchController.js"></script> -->
 
 <!-- ROUTES POPULAR -->
 <script type="text/javascript" src="js/routes/popular/index.js"></script>
@@ -48,7 +48,7 @@
 
 
 <!-- MOVIE SERVICES -->
-<!-- <script type="text/javascript" src="js/routes/services/movieService.js"></script> -->
+<script type="text/javascript" src="js/services/movieService.js"></script>
 </body>
 
 </html>

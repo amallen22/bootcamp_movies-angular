@@ -1,17 +1,15 @@
 angular.module('movieApp')
 
 // .controller('popularController', function ($scope, $rootScope, movieService) {
-.controller('popularController', function ($scope) {
+.controller('popularController', function ($scope, movieService) {
   $scope.section = 'POPULAR'
 
-  // $scope.$on('queryReady', function (e, data) {
-  //   var query = data.query
-  //   movieService.searchMovie(query)
-  //        .then(function (response) {
-  //        	console.log(response)
+  movieService.getPopularFilm()
+  .then(function (oResponse) {
+    console.log(oResponse)
 
-  //          // $scope.artists = response.data.artists.items
-  //          // $scope.hidden = false
-  //        })
-  // })
+    $scope.result = oResponse.data.results
+    $scope.title = oResponse.data.results.title
+    $scope.overview = oResponse.data.results.overview
+  })
 })
